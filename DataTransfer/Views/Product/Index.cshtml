@@ -1,0 +1,9 @@
+﻿@using DataTransfer.Models
+@model List<Computer>
+
+@foreach (var item in Model)
+{
+    <p style="@(item.Id>3 ? "color:green":"")">
+        @item.Brand, @item.Model, @item.Ram
+    </p>
+}
