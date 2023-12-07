@@ -4,12 +4,12 @@
 
 namespace SQLConnection.Migrations
 {
-    public partial class createdKinolar : Migration
+    public partial class createdMoviesTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Kinolar",
+                name: "Movies",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -19,14 +19,14 @@ namespace SQLConnection.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Kinolar", x => x.Id);
+                    table.PrimaryKey("PK_Movies", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Kinolar");
+                name: "Movies");
         }
     }
 }

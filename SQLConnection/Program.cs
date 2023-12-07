@@ -10,6 +10,8 @@ builder.Services.AddDbContext<ProductDbContext>(opt =>
 });
 var app = builder.Build();
 
+app.UseStaticFiles();
+
 app.MapControllerRoute("default", "{controller=home}/{action=index}/{id?}");
 
 app.Run();

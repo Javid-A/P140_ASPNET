@@ -11,8 +11,8 @@ using SQLConnection.DAL;
 namespace SQLConnection.Migrations
 {
     [DbContext(typeof(ProductDbContext))]
-    [Migration("20231206084500_createdKinolar")]
-    partial class createdKinolar
+    [Migration("20231207072850_addedImageColumnToMovieTable")]
+    partial class addedImageColumnToMovieTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,13 +34,17 @@ namespace SQLConnection.Migrations
                     b.Property<double>("IMDB")
                         .HasColumnType("float");
 
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Kinolar");
+                    b.ToTable("Movies");
                 });
 #pragma warning restore 612, 618
         }

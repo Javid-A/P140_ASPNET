@@ -1,0 +1,18 @@
+﻿@model Movie
+
+
+<h2>
+    Detail Page of @Model.Name
+</h2>
+
+
+<div>
+    <img width="300" src="@Model.Image"/><br />
+    <p>
+        @Model.IMDB
+    </p>
+</div>
+
+<h1>
+    @Model.MovieHeader?.Context
+</h1>

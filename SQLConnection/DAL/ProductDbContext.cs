@@ -10,5 +10,6 @@ namespace SQLConnection.DAL
         }
 
         public DbSet<Movie> Movies { get; set; }
+        public DbSet<MovieHeader> MovieHeaders { get; set; }
     }
 }
